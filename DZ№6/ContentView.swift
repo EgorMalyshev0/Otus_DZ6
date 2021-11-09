@@ -35,6 +35,7 @@ struct ContentView: View {
                     Image(systemName: "3.circle")
                 }
                 .tag(TabType.third.rawValue)
+                .environmentObject(suffixViewModel)
         }
     }
 }

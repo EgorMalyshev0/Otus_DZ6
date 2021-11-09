@@ -8,13 +8,12 @@
 import SwiftUI
 
 struct ThirdScreen: View {
-    var body: some View {
-        Text("Just Third Screen")
-    }
-}
+    
+    @EnvironmentObject var suffixViewModel: SuffixViewModel
 
-struct ThirdScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        ThirdScreen()
+    var body: some View {
+        List(suffixViewModel.timeSortedSuffixes) { item in
+            SuffixTimeListCell(suffixItem: item)
+        }
     }
 }

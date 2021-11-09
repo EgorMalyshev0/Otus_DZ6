@@ -17,6 +17,7 @@
 		DE62D5A127353FE900182B9F /* SuffixItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE62D59827352EAA00182B9F /* SuffixItem.swift */; };
 		DE62D5C3273AF76F00182B9F /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE62D5C2273AF76F00182B9F /* Notification.swift */; };
 		DE62D5C5273AF78C00182B9F /* SuffixJobSchedular.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE62D5C4273AF78C00182B9F /* SuffixJobSchedular.swift */; };
+		DE62D5C7273AFB5D00182B9F /* SuffixTimeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE62D5C6273AFB5D00182B9F /* SuffixTimeListCell.swift */; };
 		DE6B0F922733B97E004B77A9 /* DZ_6App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B0F912733B97E004B77A9 /* DZ_6App.swift */; };
 		DE6B0F942733B97E004B77A9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B0F932733B97E004B77A9 /* ContentView.swift */; };
 		DE6B0F962733B981004B77A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE6B0F952733B981004B77A9 /* Assets.xcassets */; };
@@ -70,6 +71,7 @@
 		DE62D59B27353F7300182B9F /* AppGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroup.swift; sourceTree = "<group>"; };
 		DE62D5C2273AF76F00182B9F /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		DE62D5C4273AF78C00182B9F /* SuffixJobSchedular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixJobSchedular.swift; sourceTree = "<group>"; };
+		DE62D5C6273AFB5D00182B9F /* SuffixTimeListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixTimeListCell.swift; sourceTree = "<group>"; };
 		DE6B0F8E2733B97E004B77A9 /* DZ№6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DZ№6.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE6B0F912733B97E004B77A9 /* DZ_6App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DZ_6App.swift; sourceTree = "<group>"; };
 		DE6B0F932733B97E004B77A9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				DE6B0FA32733BA9D004B77A9 /* SecondScreen.swift */,
 				DE6B0FA52733BBCF004B77A9 /* ThirdScreen.swift */,
 				DE62D5942734486100182B9F /* SuffixListCell.swift */,
+				DE62D5C6273AFB5D00182B9F /* SuffixTimeListCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				DE6B0F942733B97E004B77A9 /* ContentView.swift in Sources */,
 				DE6B0FA02733BA46004B77A9 /* Router.swift in Sources */,
 				DE6B0F922733B97E004B77A9 /* DZ_6App.swift in Sources */,
+				DE62D5C7273AFB5D00182B9F /* SuffixTimeListCell.swift in Sources */,
 				DE62D5C3273AF76F00182B9F /* Notification.swift in Sources */,
 				DE62D59C27353F7300182B9F /* AppGroup.swift in Sources */,
 				DE6B0FA42733BA9D004B77A9 /* SecondScreen.swift in Sources */,

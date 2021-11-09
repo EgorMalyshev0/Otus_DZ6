@@ -39,7 +39,7 @@ struct FirstScreen: View {
             hideKeyboard()
         }
         .onReceive(publisher) { _ in
-            router.selection = 1
+            router.selection = 2
         }
     }
     

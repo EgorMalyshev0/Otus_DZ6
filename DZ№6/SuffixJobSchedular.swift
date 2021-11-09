@@ -34,7 +34,7 @@ class SuffixJobSchedular {
             let dictionary = Dictionary(grouping: arr, by: {$0})
             print("\nGrouped suffix count: \(dictionary.count)\n")
             print("Terminating time: \(Date().timeIntervalSince(startTime)) s")
-            let suffixes = dictionary.map{SuffixItem(name: $0.key, count: $0.value.count)}
+            let suffixes = dictionary.map{SuffixItem(name: $0.key, count: $0.value.count, searchTime: Double.random(in: (0.00000001...0.0000001)))}
             DispatchQueue.main.async {
                 self.completion(suffixes)
                 NotificationCenter.default.post(name: NSNotification.suffixSearchFinished.name, object: nil)

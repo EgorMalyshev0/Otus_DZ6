@@ -13,10 +13,12 @@ class SuffixViewModel: ObservableObject {
     @Published var suffixes: [SuffixItem] = .init() {
         didSet {
             findSortedSuffixes()
+            findTimeSortedSuffixes()
             findTop10Suffixes()
         }
     }
     @Published var sortedSuffixes: [SuffixItem] = .init()
+    @Published var timeSortedSuffixes: [SuffixItem] = .init()
     @Published var top10TripleSuffixes: [SuffixItem] = .init()
     @Published var isLoading: Bool = false
     
@@ -26,7 +28,23 @@ class SuffixViewModel: ObservableObject {
     }
     
     private func findSortedSuffixes() {
-        sortedSuffixes = Array(suffixes.sorted(by: {$0.name < $1.name}))
+        DispatchQueue.global().async { [weak self] in
+            guard let self = self else { return }
+            let array = Array(self.suffixes.sorted(by: {$0.name < $1.name}))
+            DispatchQueue.main.async {
+                self.sortedSuffixes = array
+            }
+        }
+    }
+    
+    private func findTimeSortedSuffixes() {
+        DispatchQueue.global().async { [weak self] in
+            guard let self = self else { return }
+            let array = Array(self.suffixes.sorted(by: {$0.searchTime < $1.searchTime}))
+            DispatchQueue.main.async {
+                self.timeSortedSuffixes = array
+            }
+        }
     }
     
     private func findTop10Suffixes() {
