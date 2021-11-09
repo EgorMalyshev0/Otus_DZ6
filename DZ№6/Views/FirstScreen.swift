@@ -13,7 +13,8 @@ struct FirstScreen: View {
     @EnvironmentObject var suffixViewModel: SuffixViewModel
     
     @State private var text = "Example text"
-    @State var isLoading: Bool = false
+
+    let publisher = NotificationCenter.default.publisher(for: NSNotification.suffixSearchFinished.name)
 
     var body: some View {
         NavigationView {
@@ -23,8 +24,10 @@ struct FirstScreen: View {
                     .border(.gray, width: 1)
                     .padding()
                     .frame(maxHeight: 300)
-                Button("Perform suffix magic", action: performAction)
-                if isLoading {
+                Button("Perform suffix magic") {
+                    suffixViewModel.performSearch(with: text)
+                }
+                if suffixViewModel.isLoading {
                     ProgressView()
                         .progressViewStyle(CircularProgressViewStyle())
                         .padding()
@@ -35,35 +38,15 @@ struct FirstScreen: View {
         .onTapGesture {
             hideKeyboard()
         }
+        .onReceive(publisher) { _ in
+            router.selection = 1
+        }
     }
     
     private func hideKeyboard() {
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
     
-    private func performAction() {
-        isLoading = true
-        DispatchQueue.global().async {
-            let startTime = Date()
-            print("Starting work with text. Text count: \(text.count)\n")
-            let set = CharacterSet(charactersIn: ".,:!?-()[]{}/\" ")
-            let words = text.components(separatedBy: set)
-            let seqs = words.map{WordSequence(word: $0)}
-            var arr: [String] = []
-            for s in seqs {
-                arr.append(contentsOf: s.map{$0})
-            }
-            print("Suffix count: \(arr.count)\n")
-            let dictionary = Dictionary(grouping: arr, by: {$0})
-            print("\nGrouped suffix count: \(dictionary.count)\n")
-            print("Terminating time: \(Date().timeIntervalSince(startTime)) s")
-            DispatchQueue.main.async {
-                suffixViewModel.suffixes = dictionary.map{SuffixItem(name: $0.key, count: $0.value.count)}
-                isLoading = false
-                router.selection = 1
-            }
-        }
-    }
 }
 
 struct FirstScreen_Previews: PreviewProvider {

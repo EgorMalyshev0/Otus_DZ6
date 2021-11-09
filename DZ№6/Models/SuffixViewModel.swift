@@ -18,6 +18,12 @@ class SuffixViewModel: ObservableObject {
     }
     @Published var sortedSuffixes: [SuffixItem] = .init()
     @Published var top10TripleSuffixes: [SuffixItem] = .init()
+    @Published var isLoading: Bool = false
+    
+    lazy var schedular = SuffixJobSchedular() { [weak self] suffixes in
+        self?.suffixes = suffixes
+        self?.isLoading = false
+    }
     
     private func findSortedSuffixes() {
         sortedSuffixes = Array(suffixes.sorted(by: {$0.name < $1.name}))
@@ -40,6 +46,11 @@ class SuffixViewModel: ObservableObject {
                 print(error.localizedDescription)
             }
         }
+    }
+    
+    func performSearch(with text: String) {
+        isLoading = true
+        schedular.execute(with: text)
     }
     
 }
