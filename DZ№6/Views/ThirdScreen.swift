@@ -13,7 +13,17 @@ struct ThirdScreen: View {
 
     var body: some View {
         List(suffixViewModel.timeSortedSuffixes) { item in
-            SuffixTimeListCell(suffixItem: item)
+            SuffixTimeListCell(suffixItem: item, color: color(of: item))
         }
+    }
+    
+    func color(of item: SuffixItem) -> UIColor {
+        if item.id == suffixViewModel.timeSortedSuffixes.last?.id {
+            return .red
+        }
+        if item.id == suffixViewModel.timeSortedSuffixes.first?.id {
+            return .green
+        }
+        return .label
     }
 }

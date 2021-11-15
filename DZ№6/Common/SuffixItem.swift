@@ -12,5 +12,5 @@ struct SuffixItem: Identifiable, Codable {
     let name: String
     let count: Int
     var id = UUID().uuidString
-    let searchTime: Double
+    let searchTime: TimeInterval
 }

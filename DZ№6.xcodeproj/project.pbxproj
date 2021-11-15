@@ -16,8 +16,9 @@
 		DE62D59D27353F7300182B9F /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE62D59B27353F7300182B9F /* AppGroup.swift */; };
 		DE62D5A127353FE900182B9F /* SuffixItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE62D59827352EAA00182B9F /* SuffixItem.swift */; };
 		DE62D5C3273AF76F00182B9F /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE62D5C2273AF76F00182B9F /* Notification.swift */; };
-		DE62D5C5273AF78C00182B9F /* SuffixJobSchedular.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE62D5C4273AF78C00182B9F /* SuffixJobSchedular.swift */; };
+		DE62D5C5273AF78C00182B9F /* SuffixJobScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE62D5C4273AF78C00182B9F /* SuffixJobScheduler.swift */; };
 		DE62D5C7273AFB5D00182B9F /* SuffixTimeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE62D5C6273AFB5D00182B9F /* SuffixTimeListCell.swift */; };
+		DE62D5F5273C510600182B9F /* Suffix.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE62D5F4273C510600182B9F /* Suffix.swift */; };
 		DE6B0F922733B97E004B77A9 /* DZ_6App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B0F912733B97E004B77A9 /* DZ_6App.swift */; };
 		DE6B0F942733B97E004B77A9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B0F932733B97E004B77A9 /* ContentView.swift */; };
 		DE6B0F962733B981004B77A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE6B0F952733B981004B77A9 /* Assets.xcassets */; };
@@ -34,6 +35,8 @@
 		DE6B0FD62733BF62004B77A9 /* SuffixWidgetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B0FD52733BF62004B77A9 /* SuffixWidgetModel.swift */; };
 		DE6B0FD92733C041004B77A9 /* SuffixWidgetEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B0FD82733C041004B77A9 /* SuffixWidgetEntryView.swift */; };
 		DE6B0FDB2733C126004B77A9 /* SuffixWidgetTimeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B0FDA2733C126004B77A9 /* SuffixWidgetTimeline.swift */; };
+		DE96ABAE2742DC8400A63E1F /* ThreadSafeArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE96ABAD2742DC8400A63E1F /* ThreadSafeArray.swift */; };
+		DE96ABB02742DCA300A63E1F /* SuffixFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE96ABAF2742DCA300A63E1F /* SuffixFinder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,8 +73,9 @@
 		DE62D59827352EAA00182B9F /* SuffixItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixItem.swift; sourceTree = "<group>"; };
 		DE62D59B27353F7300182B9F /* AppGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroup.swift; sourceTree = "<group>"; };
 		DE62D5C2273AF76F00182B9F /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
-		DE62D5C4273AF78C00182B9F /* SuffixJobSchedular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixJobSchedular.swift; sourceTree = "<group>"; };
+		DE62D5C4273AF78C00182B9F /* SuffixJobScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixJobScheduler.swift; sourceTree = "<group>"; };
 		DE62D5C6273AFB5D00182B9F /* SuffixTimeListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixTimeListCell.swift; sourceTree = "<group>"; };
+		DE62D5F4273C510600182B9F /* Suffix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Suffix.swift; sourceTree = "<group>"; };
 		DE6B0F8E2733B97E004B77A9 /* DZ№6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DZ№6.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE6B0F912733B97E004B77A9 /* DZ_6App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DZ_6App.swift; sourceTree = "<group>"; };
 		DE6B0F932733B97E004B77A9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -90,6 +94,8 @@
 		DE6B0FD52733BF62004B77A9 /* SuffixWidgetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixWidgetModel.swift; sourceTree = "<group>"; };
 		DE6B0FD82733C041004B77A9 /* SuffixWidgetEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixWidgetEntryView.swift; sourceTree = "<group>"; };
 		DE6B0FDA2733C126004B77A9 /* SuffixWidgetTimeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixWidgetTimeline.swift; sourceTree = "<group>"; };
+		DE96ABAD2742DC8400A63E1F /* ThreadSafeArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadSafeArray.swift; sourceTree = "<group>"; };
+		DE96ABAF2742DCA300A63E1F /* SuffixFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixFinder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +133,7 @@
 				DE62D5902733FDA200182B9F /* WordSequence.swift */,
 				DE6B0F9F2733BA46004B77A9 /* Router.swift */,
 				DE62D5922733FEE200182B9F /* SuffixViewModel.swift */,
+				DE62D5F4273C510600182B9F /* Suffix.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -171,7 +178,7 @@
 				DE6B0F932733B97E004B77A9 /* ContentView.swift */,
 				DE62D58E2733E28D00182B9F /* TabType.swift */,
 				DE62D5C2273AF76F00182B9F /* Notification.swift */,
-				DE62D5C4273AF78C00182B9F /* SuffixJobSchedular.swift */,
+				DE96ABAC2742DC7200A63E1F /* Scheduler */,
 				DE62D5A027353FC400182B9F /* Views */,
 				DE62D59F27353FA000182B9F /* Models */,
 				DE62D59E27353F8500182B9F /* Common */,
@@ -225,6 +232,16 @@
 				DE6B0FD82733C041004B77A9 /* SuffixWidgetEntryView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		DE96ABAC2742DC7200A63E1F /* Scheduler */ = {
+			isa = PBXGroup;
+			children = (
+				DE62D5C4273AF78C00182B9F /* SuffixJobScheduler.swift */,
+				DE96ABAF2742DCA300A63E1F /* SuffixFinder.swift */,
+				DE96ABAD2742DC8400A63E1F /* ThreadSafeArray.swift */,
+			);
+			path = Scheduler;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,7 +347,7 @@
 			files = (
 				DE62D5952734486100182B9F /* SuffixListCell.swift in Sources */,
 				DE6B0FA22733BA86004B77A9 /* FirstScreen.swift in Sources */,
-				DE62D5C5273AF78C00182B9F /* SuffixJobSchedular.swift in Sources */,
+				DE62D5C5273AF78C00182B9F /* SuffixJobScheduler.swift in Sources */,
 				DE6B0FA62733BBCF004B77A9 /* ThirdScreen.swift in Sources */,
 				DE62D5912733FDA200182B9F /* WordSequence.swift in Sources */,
 				DE6B0F942733B97E004B77A9 /* ContentView.swift in Sources */,
@@ -340,8 +357,11 @@
 				DE62D5C3273AF76F00182B9F /* Notification.swift in Sources */,
 				DE62D59C27353F7300182B9F /* AppGroup.swift in Sources */,
 				DE6B0FA42733BA9D004B77A9 /* SecondScreen.swift in Sources */,
+				DE62D5F5273C510600182B9F /* Suffix.swift in Sources */,
 				DE62D59927352EAA00182B9F /* SuffixItem.swift in Sources */,
+				DE96ABB02742DCA300A63E1F /* SuffixFinder.swift in Sources */,
 				DE62D58F2733E28D00182B9F /* TabType.swift in Sources */,
+				DE96ABAE2742DC8400A63E1F /* ThreadSafeArray.swift in Sources */,
 				DE62D5932733FEE200182B9F /* SuffixViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -502,6 +522,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -513,7 +534,7 @@
 				PRODUCT_NAME = "DZ№6";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -533,6 +554,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -544,7 +566,7 @@
 				PRODUCT_NAME = "DZ№6";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -572,7 +594,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -600,7 +622,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

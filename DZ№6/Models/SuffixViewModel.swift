@@ -22,7 +22,7 @@ class SuffixViewModel: ObservableObject {
     @Published var top10TripleSuffixes: [SuffixItem] = .init()
     @Published var isLoading: Bool = false
     
-    lazy var schedular = SuffixJobSchedular() { [weak self] suffixes in
+    lazy var schedular = SuffixJobScheduler() { [weak self] suffixes in
         self?.suffixes = suffixes
         self?.isLoading = false
     }
